@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "1097761661696",
+    "firebase_url": "https://agile-hackathon-2020.firebaseio.com",
+    "project_id": "agile-hackathon-2020",
+    "storage_bucket": "agile-hackathon-2020.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1097761661696:android:ec2252a3ce91567a3489e5",
+        "android_client_info": {
+          "package_name": "com.example.pureengine"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1097761661696-g86badmf900lrlvtgonnvpr3erhhcr8h.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC1SAFPTEwHGlylV2ftZs17b9oQHcUoSZw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1097761661696-g86badmf900lrlvtgonnvpr3erhhcr8h.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

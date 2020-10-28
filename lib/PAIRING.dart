@@ -1,6 +1,9 @@
+import 'package:adobe_xd/adobe_xd.dart';
 import 'package:flutter/material.dart';
 import 'package:adobe_xd/pinned.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+
+import 'PAIRING7.dart';
 
 class PAIRING extends StatelessWidget {
   PAIRING({
@@ -293,40 +296,50 @@ class PAIRING extends StatelessWidget {
                           pinRight: true,
                           pinTop: true,
                           pinBottom: true,
-                          child: Stack(
-                            children: <Widget>[
-                              Pinned.fromSize(
-                                bounds: Rect.fromLTWH(0.0, 0.0, 327.0, 83.0),
-                                size: Size(327.0, 83.0),
-                                pinLeft: true,
-                                pinRight: true,
-                                pinTop: true,
-                                pinBottom: true,
-                                child: Container(
-                                  decoration: BoxDecoration(
-                                    borderRadius: BorderRadius.circular(36.0),
-                                    color: const Color(0xff46b5ff),
-                                  ),
-                                ),
-                              ),
-                              Pinned.fromSize(
-                                bounds: Rect.fromLTWH(96.0, 22.0, 154.0, 40.0),
-                                size: Size(327.0, 83.0),
-                                fixedWidth: true,
-                                fixedHeight: true,
-                                child: Text(
-                                  'ルームへ参加',
-                                  style: TextStyle(
-                                    fontFamily: 'Josefin Sans',
-                                    fontSize: 30,
-                                    color: const Color(0xffffffff),
-                                    fontWeight: FontWeight.w700,
-                                    height: 1.6,
-                                  ),
-                                  textAlign: TextAlign.center,
-                                ),
+                          child: PageLink(
+                            links: [
+                              PageLinkInfo(
+                                transition: LinkTransition.Fade,
+                                ease: Curves.easeOut,
+                                duration: 0.3,
+                                pageBuilder: () => PAIRING7(),
                               ),
                             ],
+                            child: Stack(
+                              children: <Widget>[
+                                Pinned.fromSize(
+                                  bounds: Rect.fromLTWH(0.0, 0.0, 327.0, 83.0),
+                                  size: Size(327.0, 83.0),
+                                  pinLeft: true,
+                                  pinRight: true,
+                                  pinTop: true,
+                                  pinBottom: true,
+                                  child: Container(
+                                    decoration: BoxDecoration(
+                                      borderRadius: BorderRadius.circular(36.0),
+                                      color: const Color(0xff46b5ff),
+                                    ),
+                                  ),
+                                ),
+                                Pinned.fromSize(
+                                  bounds: Rect.fromLTWH(96.0, 22.0, 154.0, 40.0),
+                                  size: Size(327.0, 83.0),
+                                  fixedWidth: true,
+                                  fixedHeight: true,
+                                  child: Text(
+                                    'ルームへ参加',
+                                    style: TextStyle(
+                                      fontFamily: 'Josefin Sans',
+                                      fontSize: 30,
+                                      color: const Color(0xffffffff),
+                                      fontWeight: FontWeight.w700,
+                                      height: 1.6,
+                                    ),
+                                    textAlign: TextAlign.center,
+                                  ),
+                                ),
+                              ],
+                            ),
                           ),
                         ),
                       ],

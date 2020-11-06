@@ -49,11 +49,11 @@ class MapsDemoState extends State<MapsDemo> {
         position: LatLng(35.6580339, 139.7016358),
         // infoWindowText: InfoWindowText("タイトル", "説明分等")
       ));
-      _markers.add(Marker(
-        markerId: MarkerId(''),
-        position: LatLng(50.6580339, 140.7016358),
-        // infoWindowText: InfoWindowText("タイトル", "説明分等")
-      ));
+      // _markers.add(Marker(
+      //   markerId: MarkerId(''),
+      //   position: LatLng(50.6580339, 140.7016358),
+      //   // infoWindowText: InfoWindowText("タイトル", "説明分等")
+      // ));
       // mapController.add(options);
     });
   }

@@ -46,7 +46,7 @@ class _GoogleMapsState extends State<GoogleMaps> {
       return MaterialApp(
         home: Scaffold(
           appBar: AppBar(
-            title: Text('Maps Sample App'),
+            title: Text('位置情報を共有しよう'),
             backgroundColor: Colors.green[700],
           ),
           body: GoogleMap(

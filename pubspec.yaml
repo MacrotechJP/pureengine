@@ -24,8 +24,6 @@ dependencies:
   adobe_xd: ^1.0.0+1
   flutter:
     sdk: flutter
-
-
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^0.1.2
@@ -41,6 +39,18 @@ dev_dependencies:
 
 # The following section is specific to Flutter.
 flutter:
+  assets:
+    - img/drawable-xxhdpi/1497553309-101_84843.png
+    - img/drawable-xxhdpi/cloudrain.png
+    - img/drawable-xxhdpi/Comment.png
+    - img/drawable-xxhdpi/form.toggle.on.png
+    - img/drawable-xxhdpi/goR2ms96n5puxHt1603447948_1603447955.png
+    - img/drawable-xxhdpi/Lock.png
+    - img/drawable-xxhdpi/Profile.png
+    - img/drawable-xxhdpi/WvS4kxAJjxgk2sr1603448025_1603448031.png
+    - img/drawable-xxhdpi/wyfLYjiuJjOxWkO1603447870_1603447876.png
+    - img/drawable-xxhdpi/YfFgvjDjoD5gQfX1603447675_1603447684.png
+    - img/drawable-xxhdpi/グループ 371.png
 
   # The following line ensures that the Material Icons font is
   # included with your application, so that you can use the icons in
@@ -77,3 +87,14 @@ flutter:
   #
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/custom-fonts/#from-packages
+  fonts:
+    - family: OpenSans
+      fonts:
+        - asset: assets/OpenSans-Light.ttf
+#          style: italic
+          weight: 300 # assets/fonts/OpenSans-Bold.ttfのウェイトを指定
+#    - family: Quicksand
+#        fonts:
+#            - asset: assets/fonts/Quicksand-Regular.ttf
+#              - asset: assets/fonts/Quicksand-Bold.ttf
+#                weight: 700

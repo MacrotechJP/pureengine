@@ -1,6 +1,11 @@
 import 'package:flutter/material.dart';
+import './PAIRING2.dart';
+import 'package:adobe_xd/page_link.dart';
 import 'package:adobe_xd/pinned.dart';
+import './ROOMTOP.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+
+import 'google_maps.dart';
 
 class PAIRING5 extends StatelessWidget {
   PAIRING5({
@@ -20,23 +25,33 @@ class PAIRING5 extends StatelessWidget {
             ),
           ),
           Transform.translate(
-            offset: Offset(0.0, 753.0),
-            child: Container(
-              width: 375.0,
-              height: 59.0,
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.only(
-                  topLeft: Radius.circular(20.0),
-                  topRight: Radius.circular(20.0),
+            offset: Offset(0.0, 751.0),
+            child: PageLink(
+              links: [
+                PageLinkInfo(
+                  transition: LinkTransition.Fade,
+                  ease: Curves.easeOut,
+                  duration: 0.3,
+                  pageBuilder: () => PAIRING2(),
                 ),
-                color: const Color(0xff5663ff),
-                boxShadow: [
-                  BoxShadow(
-                    color: const Color(0x29000000),
-                    offset: Offset(0, -11),
-                    blurRadius: 6,
+              ],
+              child: Container(
+                width: 375.0,
+                height: 59.0,
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.only(
+                    topLeft: Radius.circular(20.0),
+                    topRight: Radius.circular(20.0),
                   ),
-                ],
+                  color: const Color(0xff5663ff),
+                  boxShadow: [
+                    BoxShadow(
+                      color: const Color(0x29000000),
+                      offset: Offset(0, -11),
+                      blurRadius: 6,
+                    ),
+                  ],
+                ),
               ),
             ),
           ),
@@ -107,20 +122,30 @@ class PAIRING5 extends StatelessWidget {
           ),
           Transform.translate(
             offset: Offset(18.0, 48.1),
-            child: SvgPicture.string(
-              _svg_4wggob,
-              allowDrawingOutsideViewBox: true,
+            child: PageLink(
+              links: [
+                PageLinkInfo(
+                  transition: LinkTransition.Fade,
+                  ease: Curves.easeOut,
+                  duration: 0.3,
+                  pageBuilder: () => ROOMTOP(),
+                ),
+              ],
+              child: SvgPicture.string(
+                _svg_4wggob,
+                allowDrawingOutsideViewBox: true,
+              ),
             ),
           ),
           Transform.translate(
-            offset: Offset(42.8, 42.0),
+            offset: Offset(42.8, 30.0),
             child: SizedBox(
               width: 290.0,
               child: Text(
-                'APP NAME',
+                'ルームに参加',
                 style: TextStyle(
-                  fontFamily: 'Josefin Sans',
-                  fontSize: 45,
+                  fontFamily: 'OpenSans',
+                  fontSize: 30,
                   color: const Color(0xffffffff),
                   fontWeight: FontWeight.w600,
                   height: 1.511111111111111,
@@ -245,20 +270,20 @@ class PAIRING5 extends StatelessWidget {
               ),
             ),
           ),
-          Transform.translate(
-            offset: Offset(63.0, 141.0),
-            child: Text(
-              '公開ルームへ参加',
-              style: TextStyle(
-                fontFamily: 'Josefin Sans',
-                fontSize: 35,
-                color: const Color(0xff3e3f68),
-                fontWeight: FontWeight.w600,
-                height: 1.3714285714285714,
-              ),
-              textAlign: TextAlign.left,
-            ),
-          ),
+          // Transform.translate(
+          //   offset: Offset(63.0, 141.0),
+          //   child: Text(
+          //     '公開ルームへ参加',
+          //     style: TextStyle(
+          //       fontFamily: 'Josefin Sans',
+          //       fontSize: 35,
+          //       color: const Color(0xff3e3f68),
+          //       fontWeight: FontWeight.w600,
+          //       height: 1.3714285714285714,
+          //     ),
+          //     textAlign: TextAlign.left,
+          //   ),
+          // ),
           Transform.translate(
             offset: Offset(153.0, 759.0),
             child: Text(
@@ -274,10 +299,10 @@ class PAIRING5 extends StatelessWidget {
             ),
           ),
           Transform.translate(
-            offset: Offset(27.0, 513.0),
+            offset: Offset(27.0, 400.0),
             child: Container(
               width: 321.0,
-              height: 72.0,
+              height: 60.0,
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(36.0),
                 color: const Color(0xffffffff),
@@ -293,12 +318,12 @@ class PAIRING5 extends StatelessWidget {
             ),
           ),
           Transform.translate(
-            offset: Offset(131.0, 533.0),
+            offset: Offset(80.0, 410.0),
             child: Text(
               'ニックネーム',
               style: TextStyle(
                 fontFamily: 'Josefin Sans',
-                fontSize: 30,
+                fontSize: 20,
                 color: const Color(0xff8a98ba),
                 height: 1.6,
               ),
@@ -381,7 +406,7 @@ class PAIRING5 extends StatelessWidget {
             ),
           ),
           Transform.translate(
-            offset: Offset(27.0, 223.0),
+            offset: Offset(27.0, 138.0),
             child: SizedBox(
               width: 321.0,
               height: 55.0,
@@ -478,24 +503,99 @@ class PAIRING5 extends StatelessWidget {
             ),
           ),
           Transform.translate(
-            offset: Offset(280.0, 237.0),
-            child: SizedBox(
-              width: 50.0,
-              child: Text(
-                '参加',
-                style: TextStyle(
-                  fontFamily: 'Josefin Sans',
-                  fontSize: 20,
-                  color: const Color(0xff8a98ba),
-                  fontWeight: FontWeight.w600,
-                  height: 2.4,
+            offset: Offset(36.0, 468.0),
+            child: Text(
+              'アイコンを選択',
+              style: TextStyle(
+                fontFamily: 'Open Sans',
+                fontSize: 16,
+                color: const Color(0xff232a2f),
+                fontWeight: FontWeight.w700,
+                height: 1.75,
+              ),
+              textAlign: TextAlign.left,
+            ),
+          ),
+          Transform.translate(
+            offset: Offset(52.0, 504.0),
+            child:
+            // Adobe XD layer: 'YfFgvjDjoD5gQfX1603…' (shape)
+            Container(
+              width: 59.0,
+              height: 55.0,
+              decoration: BoxDecoration(
+                image: DecorationImage(
+                  image: const AssetImage('img/drawable-xxhdpi/YfFgvjDjoD5gQfX1603447675_1603447684.png'),
+                  fit: BoxFit.fill,
                 ),
-                textAlign: TextAlign.center,
               ),
             ),
           ),
           Transform.translate(
-            offset: Offset(27.0, 288.0),
+            offset: Offset(126.0, 504.0),
+            child:
+            // Adobe XD layer: 'wyfLYjiuJjOxWkO1603…' (shape)
+            Container(
+              width: 56.0,
+              height: 55.0,
+              decoration: BoxDecoration(
+                image: DecorationImage(
+                  image: const AssetImage('img/drawable-xxhdpi/wyfLYjiuJjOxWkO1603447870_1603447876.png'),
+                  fit: BoxFit.fill,
+                ),
+              ),
+            ),
+          ),
+          Transform.translate(
+            offset: Offset(197.0, 504.0),
+            child:
+            // Adobe XD layer: 'goR2ms96n5puxHt1603…' (shape)
+            Container(
+              width: 56.0,
+              height: 55.0,
+              decoration: BoxDecoration(
+                image: DecorationImage(
+                  image: const AssetImage('img/drawable-xxhdpi/WvS4kxAJjxgk2sr1603448025_1603448031.png'),
+                  fit: BoxFit.fill,
+                ),
+              ),
+            ),
+          ),
+          Transform.translate(
+            offset: Offset(268.0, 504.0),
+            child:
+            // Adobe XD layer: 'WvS4kxAJjxgk2sr1603…' (shape)
+            Container(
+              width: 55.0,
+              height: 55.0,
+              decoration: BoxDecoration(
+                image: DecorationImage(
+                  image: const AssetImage('img/drawable-xxhdpi/goR2ms96n5puxHt1603447948_1603447955.png'),
+                  fit: BoxFit.fill,
+                ),
+              ),
+            ),
+          ),
+
+          // Transform.translate(
+          //   offset: Offset(280.0, 133.0),
+          //   child: SizedBox(
+          //     width: 50.0,
+          //     child: Text(
+          //       '参加',
+          //       style: TextStyle(
+          //         fontFamily: 'Josefin Sans',
+          //         fontSize: 20,
+          //         color: const Color(0xff8a98ba),
+          //         fontWeight: FontWeight.w600,
+          //         height: 2.4,
+          //       ),
+          //       textAlign: TextAlign.center,
+          //     ),
+          //   ),
+          // ),
+          Transform.translate(
+            offset: Offset(27.0, 204.0),
             child: SizedBox(
               width: 321.0,
               height: 55.0,
@@ -564,7 +664,7 @@ class PAIRING5 extends StatelessWidget {
             ),
           ),
           Transform.translate(
-            offset: Offset(27.0, 353.0),
+            offset: Offset(27.0, 269.0),
             child: SizedBox(
               width: 321.0,
               height: 55.0,
@@ -630,7 +730,7 @@ class PAIRING5 extends StatelessWidget {
             ),
           ),
           Transform.translate(
-            offset: Offset(27.0, 418.0),
+            offset: Offset(27.0, 334.0),
             child: SizedBox(
               width: 321.0,
               height: 55.0,
@@ -719,7 +819,7 @@ class PAIRING5 extends StatelessWidget {
             ),
           ),
           Transform.translate(
-            offset: Offset(27.0, 223.0),
+            offset: Offset(27.0,138.0),
             child: Container(
               width: 321.3,
               height: 55.0,
@@ -742,7 +842,7 @@ class PAIRING5 extends StatelessWidget {
             ),
           ),
           Transform.translate(
-            offset: Offset(40.5, 237.0),
+            offset: Offset(40.5, 135.0),
             child: SizedBox(
               width: 170.0,
               child: Text(
@@ -759,7 +859,7 @@ class PAIRING5 extends StatelessWidget {
             ),
           ),
           Transform.translate(
-            offset: Offset(274.3, 235.7),
+            offset: Offset(274.3, 149.7),
             child: Container(
               width: 61.0,
               height: 31.0,
@@ -770,7 +870,7 @@ class PAIRING5 extends StatelessWidget {
             ),
           ),
           Transform.translate(
-            offset: Offset(41.9, 302.0),
+            offset: Offset(41.9, 202.0),
             child: SizedBox(
               width: 154.0,
               child: Text(
@@ -787,7 +887,7 @@ class PAIRING5 extends StatelessWidget {
             ),
           ),
           Transform.translate(
-            offset: Offset(44.5, 367.0),
+            offset: Offset(44.5, 267.0),
             child: SizedBox(
               width: 122.0,
               child: Text(
@@ -804,7 +904,7 @@ class PAIRING5 extends StatelessWidget {
             ),
           ),
           Transform.translate(
-            offset: Offset(47.1, 432.0),
+            offset: Offset(47.1, 332.0),
             child: SizedBox(
               width: 91.0,
               child: Text(
@@ -821,7 +921,45 @@ class PAIRING5 extends StatelessWidget {
             ),
           ),
           Transform.translate(
-            offset: Offset(280.0, 237.0),
+            offset: Offset(280.0, 135.0),
+            child: SizedBox(
+              width: 50.0,
+            child: PageLink(
+            links: [
+            PageLinkInfo(
+            transition: LinkTransition.Fade,
+            ease: Curves.easeOut,
+            duration: 0.3,
+            pageBuilder: () => GoogleMaps(),
+            ),
+            ],
+              child: Text(
+                '参加',
+                style: TextStyle(
+                  fontFamily: 'Josefin Sans',
+                  fontSize: 20,
+                  color: const Color(0xff8a98ba),
+                  fontWeight: FontWeight.w600,
+                  height: 2.4,
+                ),
+                textAlign: TextAlign.center,
+              ),
+            ),
+            ),
+          ),
+          Transform.translate(
+            offset: Offset(274.3, 215.7),
+            child: Container(
+              width: 61.0,
+              height: 31.0,
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(8.0),
+                color: const Color(0x82ffffff),
+              ),
+            ),
+          ),
+          Transform.translate(
+            offset: Offset(280.0, 201.0),
             child: SizedBox(
               width: 50.0,
               child: Text(
@@ -838,7 +976,7 @@ class PAIRING5 extends StatelessWidget {
             ),
           ),
           Transform.translate(
-            offset: Offset(274.3, 299.7),
+            offset: Offset(274.3, 280.7),
             child: Container(
               width: 61.0,
               height: 31.0,
@@ -849,7 +987,7 @@ class PAIRING5 extends StatelessWidget {
             ),
           ),
           Transform.translate(
-            offset: Offset(280.0, 301.0),
+            offset: Offset(280.0, 267.0),
             child: SizedBox(
               width: 50.0,
               child: Text(
@@ -866,7 +1004,7 @@ class PAIRING5 extends StatelessWidget {
             ),
           ),
           Transform.translate(
-            offset: Offset(274.3, 364.7),
+            offset: Offset(274.3, 345.7),
             child: Container(
               width: 61.0,
               height: 31.0,
@@ -877,35 +1015,7 @@ class PAIRING5 extends StatelessWidget {
             ),
           ),
           Transform.translate(
-            offset: Offset(280.0, 366.0),
-            child: SizedBox(
-              width: 50.0,
-              child: Text(
-                '参加',
-                style: TextStyle(
-                  fontFamily: 'Josefin Sans',
-                  fontSize: 20,
-                  color: const Color(0xff8a98ba),
-                  fontWeight: FontWeight.w600,
-                  height: 2.4,
-                ),
-                textAlign: TextAlign.center,
-              ),
-            ),
-          ),
-          Transform.translate(
-            offset: Offset(274.3, 429.7),
-            child: Container(
-              width: 61.0,
-              height: 31.0,
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(8.0),
-                color: const Color(0x82ffffff),
-              ),
-            ),
-          ),
-          Transform.translate(
-            offset: Offset(280.0, 431.0),
+            offset: Offset(280.0, 330.0),
             child: SizedBox(
               width: 50.0,
               child: Text(

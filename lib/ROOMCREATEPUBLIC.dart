@@ -1,9 +1,18 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import './PAIRING2.dart';
+import 'package:adobe_xd/page_link.dart';
 import 'package:adobe_xd/pinned.dart';
+import './ROOMTOP.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
-class PAIRING8 extends StatelessWidget {
-  PAIRING8({
+import 'google_maps.dart';
+
+class ROOMCREATEPUBLIC extends StatelessWidget {
+  bool _active = false;
+  void _changeSwitch(bool e)  => _active ;
+
+  ROOMCREATEPUBLIC({
     Key key,
   }) : super(key: key);
   @override
@@ -13,33 +22,137 @@ class PAIRING8 extends StatelessWidget {
       body: Stack(
         children: <Widget>[
           Transform.translate(
-            offset: Offset(26.7, 636.4),
-            child: SvgPicture.string(
-              _svg_7qtmf2,
-              allowDrawingOutsideViewBox: true,
-            ),
+            offset: Offset(26.7, 45.4),
+            // child: SvgPicture.string(
+            //   // _svg_7qtmf2,
+            //   // allowDrawingOutsideViewBox: true,
+            // ),
           ),
           Transform.translate(
-            offset: Offset(0.0, 753.0),
-            child: Container(
+            offset: Offset(0.0, 533.0),
+            child: SizedBox(
               width: 375.0,
               height: 59.0,
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.only(
-                  topLeft: Radius.circular(20.0),
-                  topRight: Radius.circular(20.0),
-                ),
-                color: const Color(0xff5663ff),
-                boxShadow: [
-                  BoxShadow(
-                    color: const Color(0x29000000),
-                    offset: Offset(0, -11),
-                    blurRadius: 6,
+              child: Stack(
+                children: <Widget>[
+                  Pinned.fromSize(
+                    bounds: Rect.fromLTWH(0.0, 6.0, 375.0, 59.0),
+                    size: Size(375.0, 59.0),
+                    pinLeft: true,
+                    pinRight: true,
+                    pinTop: true,
+                    pinBottom: true,
+                    child: PageLink(
+                      links: [
+                        PageLinkInfo(
+                          transition: LinkTransition.Fade,
+                          ease: Curves.easeOut,
+                          duration: 0.3,
+                          pageBuilder: () => GoogleMaps(),
+                        ),
+                      ],
+                      child: Stack(
+                        children: <Widget>[
+                          Pinned.fromSize(
+                            bounds: Rect.fromLTWH(0.0, 0.0, 375.0, 80.0),
+                            size: Size(375.0, 83.0),
+                            pinLeft: true,
+                            pinRight: true,
+                            pinTop: true,
+                            pinBottom: true,
+                            child: Container(
+                              width: 375.0,
+                              height: 59.0,
+                              decoration: BoxDecoration(
+                                borderRadius: BorderRadius.only(
+                                  topLeft: Radius.circular(20.0),
+                                  topRight: Radius.circular(20.0),
+                                ),
+                                color: const Color(0xff5663ff),
+                                boxShadow: [
+                                  BoxShadow(
+                                    color: const Color(0x29000000),
+                                    offset: Offset(0, -11),
+                                    blurRadius: 6,
+                                  ),
+                                ],
+                              ),
+                            ),
+                          ),
+                          Pinned.fromSize(
+                            bounds: Rect.fromLTWH(125.0, 20.0, 78.0, 40.0),
+                            size: Size(350.0, 90.0),
+                            fixedWidth: true,
+                            fixedHeight: true,
+                            child: Text(
+                              '作成',
+                              style: TextStyle(
+                                fontFamily: 'Josefin Sans',
+                                fontSize: 30,
+                                color: const Color(0xffffffff),
+                                fontWeight: FontWeight.w700,
+                                height: 1.6,
+                              ),
+                              textAlign: TextAlign.center,
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                  ),
+                  Pinned.fromSize(
+                    bounds: Rect.fromLTWH(25.0, 0.0, 96.0, 96.0),
+                    size: Size(327.0, 96.0),
+                    pinLeft: true,
+                    pinTop: true,
+                    pinBottom: true,
+                    fixedWidth: true,
+                    child:
+                    // Adobe XD layer: '1497553309-101_84843' (shape)
+                    Container(
+                      decoration: BoxDecoration(
+                        image: DecorationImage(
+                          image: const AssetImage(''),
+                          fit: BoxFit.fill,
+                        ),
+                      ),
+                    ),
                   ),
                 ],
               ),
             ),
           ),
+          // Transform.translate(
+          //   offset: Offset(0.0, 533.0),
+          //   child: PageLink(
+          //     links: [
+          //       PageLinkInfo(
+          //         transition: LinkTransition.Fade,
+          //         ease: Curves.easeOut,
+          //         duration: 0.3,
+          //         pageBuilder: () => GoogleMaps(),
+          //       ),
+          //     ],
+          //     child: Container(
+          //       width: 375.0,
+          //       height: 59.0,
+          //       decoration: BoxDecoration(
+          //         borderRadius: BorderRadius.only(
+          //           topLeft: Radius.circular(20.0),
+          //           topRight: Radius.circular(20.0),
+          //         ),
+          //         color: const Color(0xff5663ff),
+          //         boxShadow: [
+          //           BoxShadow(
+          //             color: const Color(0x29000000),
+          //             offset: Offset(0, -11),
+          //             blurRadius: 6,
+          //           ),
+          //         ],
+          //       ),
+          //     ),
+          //   ),
+          // ),
           SizedBox(
             width: 375.0,
             height: 103.0,
@@ -107,25 +220,18 @@ class PAIRING8 extends StatelessWidget {
           ),
           Transform.translate(
             offset: Offset(18.0, 48.1),
-            child: SvgPicture.string(
-              _svg_4wggob,
-              allowDrawingOutsideViewBox: true,
-            ),
-          ),
-          Transform.translate(
-            offset: Offset(42.8, 42.0),
-            child: SizedBox(
-              width: 290.0,
-              child: Text(
-                'APP NAME',
-                style: TextStyle(
-                  fontFamily: 'Josefin Sans',
-                  fontSize: 45,
-                  color: const Color(0xffffffff),
-                  fontWeight: FontWeight.w600,
-                  height: 1.511111111111111,
+            child: PageLink(
+              links: [
+                PageLinkInfo(
+                  transition: LinkTransition.Fade,
+                  ease: Curves.easeOut,
+                  duration: 0.3,
+                  pageBuilder: () => ROOMTOP(),
                 ),
-                textAlign: TextAlign.center,
+              ],
+              child: SvgPicture.string(
+                _svg_4wggob,
+                allowDrawingOutsideViewBox: true,
               ),
             ),
           ),
@@ -246,26 +352,12 @@ class PAIRING8 extends StatelessWidget {
             ),
           ),
           Transform.translate(
-            offset: Offset(99.0, 141.0),
+            offset: Offset(99.0, 30.0),
             child: Text(
               'ルームを作成',
               style: TextStyle(
-                fontFamily: 'Josefin Sans',
-                fontSize: 35,
-                color: const Color(0xff3e3f68),
-                fontWeight: FontWeight.w600,
-                height: 1.3714285714285714,
-              ),
-              textAlign: TextAlign.left,
-            ),
-          ),
-          Transform.translate(
-            offset: Offset(153.0, 759.0),
-            child: Text(
-              '作成',
-              style: TextStyle(
-                fontFamily: 'Josefin Sans',
-                fontSize: 35,
+                fontFamily: 'OpenSans',
+                fontSize: 30,
                 color: const Color(0xffffffff),
                 fontWeight: FontWeight.w600,
                 height: 1.3714285714285714,
@@ -273,11 +365,25 @@ class PAIRING8 extends StatelessWidget {
               textAlign: TextAlign.left,
             ),
           ),
+          // Transform.translate(
+          //   offset: Offset(153.0, 553.0),
+          //   child: Text(
+          //     '作成',
+          //     style: TextStyle(
+          //       fontFamily: 'Josefin Sans',
+          //       fontSize: 30,
+          //       color: const Color(0xffffffff),
+          //       fontWeight: FontWeight.w600,
+          //       height: 1.3714285714285714,
+          //     ),
+          //     textAlign: TextAlign.left,
+          //   ),
+          // ),
           Transform.translate(
-            offset: Offset(27.0, 202.0),
+            offset: Offset(27.0, 130.0),
             child: Container(
               width: 321.0,
-              height: 72.0,
+              height: 52.0,
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(36.0),
                 color: const Color(0xffffffff),
@@ -293,10 +399,10 @@ class PAIRING8 extends StatelessWidget {
             ),
           ),
           Transform.translate(
-            offset: Offset(27.0, 521.0),
+            offset: Offset(27.0, 340.0),
             child: Container(
               width: 321.0,
-              height: 72.0,
+              height: 52.0,
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(36.0),
                 color: const Color(0xffffffff),
@@ -312,12 +418,29 @@ class PAIRING8 extends StatelessWidget {
             ),
           ),
           Transform.translate(
-            offset: Offset(76.0, 222.0),
+
+            offset: Offset(140.0, 136.0),
+            child:
+            // Adobe XD layer: 'YfFgvjDjoD5gQfX1603…' (shape)
+            Container(
+              width: 75.0,
+              height: 40.0,
+                decoration: BoxDecoration(
+                  image: DecorationImage(
+                  image: const AssetImage('img/drawable-xxhdpi/form.toggle.on.png'),
+                  fit: BoxFit.fill,
+                ),
+                  )
+              )
+            ),
+
+          Transform.translate(
+            offset: Offset(76.0, 130.0),
             child: Text(
               '公開',
               style: TextStyle(
                 fontFamily: 'Josefin Sans',
-                fontSize: 25,
+                fontSize: 22,
                 color: const Color(0xffffba00),
                 height: 1.92,
               ),
@@ -325,12 +448,12 @@ class PAIRING8 extends StatelessWidget {
             ),
           ),
           Transform.translate(
-            offset: Offset(131.0, 537.0),
+            offset: Offset(60.0, 350.0),
             child: Text(
               'ニックネーム',
               style: TextStyle(
                 fontFamily: 'Josefin Sans',
-                fontSize: 30,
+                fontSize: 20,
                 color: const Color(0xff8a98ba),
                 height: 1.6,
               ),
@@ -338,15 +461,15 @@ class PAIRING8 extends StatelessWidget {
             ),
           ),
           Transform.translate(
-            offset: Offset(27.0, 289.0),
+            offset: Offset(27.0, 200.0),
             child: SizedBox(
               width: 321.0,
-              height: 72.0,
+              height: 52.0,
               child: Stack(
                 children: <Widget>[
                   Pinned.fromSize(
-                    bounds: Rect.fromLTWH(0.0, 0.0, 321.0, 72.0),
-                    size: Size(321.0, 72.0),
+                    bounds: Rect.fromLTWH(0.0, 0.0, 321.0, 52.0),
+                    size: Size(321.0, 52.0),
                     pinLeft: true,
                     pinRight: true,
                     pinTop: true,
@@ -368,15 +491,15 @@ class PAIRING8 extends StatelessWidget {
                     ),
                   ),
                   Pinned.fromSize(
-                    bounds: Rect.fromLTWH(104.0, 19.0, 97.0, 40.0),
-                    size: Size(321.0, 72.0),
+                    bounds: Rect.fromLTWH(104.0, 13.0, 97.0, 40.0),
+                    size: Size(870.0, 58.0),
                     fixedWidth: true,
                     fixedHeight: true,
                     child: Text(
                       'ルーム名',
                       style: TextStyle(
                         fontFamily: 'Josefin Sans',
-                        fontSize: 30,
+                        fontSize: 20,
                         color: const Color(0xff8a98ba),
                         height: 1.6,
                       ),
@@ -390,7 +513,7 @@ class PAIRING8 extends StatelessWidget {
           ),
           Container(),
           Transform.translate(
-            offset: Offset(36.0, 608.0),
+            offset: Offset(36.0, 408.0),
             child: Text(
               'アイコンを選択',
               style: TextStyle(
@@ -404,7 +527,7 @@ class PAIRING8 extends StatelessWidget {
             ),
           ),
           Transform.translate(
-            offset: Offset(52.0, 645.0),
+            offset: Offset(52.0, 454.0),
             child:
                 // Adobe XD layer: 'YfFgvjDjoD5gQfX1603…' (shape)
                 Container(
@@ -412,14 +535,14 @@ class PAIRING8 extends StatelessWidget {
               height: 55.0,
               decoration: BoxDecoration(
                 image: DecorationImage(
-                  image: const AssetImage(''),
+                  image: const AssetImage('img/drawable-xxhdpi/YfFgvjDjoD5gQfX1603447675_1603447684.png'),
                   fit: BoxFit.fill,
                 ),
               ),
             ),
           ),
           Transform.translate(
-            offset: Offset(126.0, 645.0),
+            offset: Offset(126.0, 454.0),
             child:
                 // Adobe XD layer: 'wyfLYjiuJjOxWkO1603…' (shape)
                 Container(
@@ -427,14 +550,14 @@ class PAIRING8 extends StatelessWidget {
               height: 55.0,
               decoration: BoxDecoration(
                 image: DecorationImage(
-                  image: const AssetImage(''),
+                  image: const AssetImage('img/drawable-xxhdpi/wyfLYjiuJjOxWkO1603447870_1603447876.png'),
                   fit: BoxFit.fill,
                 ),
               ),
             ),
           ),
           Transform.translate(
-            offset: Offset(197.0, 645.0),
+            offset: Offset(197.0, 454.0),
             child:
                 // Adobe XD layer: 'goR2ms96n5puxHt1603…' (shape)
                 Container(
@@ -442,14 +565,14 @@ class PAIRING8 extends StatelessWidget {
               height: 55.0,
               decoration: BoxDecoration(
                 image: DecorationImage(
-                  image: const AssetImage(''),
+                  image: const AssetImage('img/drawable-xxhdpi/WvS4kxAJjxgk2sr1603448025_1603448031.png'),
                   fit: BoxFit.fill,
                 ),
               ),
             ),
           ),
           Transform.translate(
-            offset: Offset(268.0, 645.0),
+            offset: Offset(268.0, 454.0),
             child:
                 // Adobe XD layer: 'WvS4kxAJjxgk2sr1603…' (shape)
                 Container(
@@ -457,7 +580,7 @@ class PAIRING8 extends StatelessWidget {
               height: 55.0,
               decoration: BoxDecoration(
                 image: DecorationImage(
-                  image: const AssetImage(''),
+                  image: const AssetImage('img/drawable-xxhdpi/goR2ms96n5puxHt1603447948_1603447955.png'),
                   fit: BoxFit.fill,
                 ),
               ),
@@ -465,23 +588,23 @@ class PAIRING8 extends StatelessWidget {
           ),
           Container(),
           Transform.translate(
-            offset: Offset(237.0, 222.0),
+            offset: Offset(237.0, 130.0),
             child: Text(
               '非公開',
               style: TextStyle(
                 fontFamily: 'Josefin Sans',
-                fontSize: 25,
+                fontSize: 22,
                 color: const Color(0xff2eac6d),
-                height: 1.92,
+                height: 1.9,
               ),
               textAlign: TextAlign.left,
             ),
           ),
           Transform.translate(
-            offset: Offset(27.0, 376.0),
+            offset: Offset(27.0, 270.0),
             child: Container(
               width: 321.0,
-              height: 72.0,
+              height: 52.0,
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(36.0),
                 color: const Color(0xffffffff),
@@ -497,12 +620,12 @@ class PAIRING8 extends StatelessWidget {
             ),
           ),
           Transform.translate(
-            offset: Offset(131.0, 395.0),
+            offset: Offset(61.0, 280.0),
             child: Text(
               '共有パスワード',
               style: TextStyle(
                 fontFamily: 'Josefin Sans',
-                fontSize: 30,
+                fontSize: 20,
                 color: const Color(0xff8a98ba),
                 height: 1.6,
               ),
